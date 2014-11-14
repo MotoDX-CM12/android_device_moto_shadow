@@ -28,5 +28,5 @@
 include device/moto/shadow-common/BoardConfig.mk
 
 TARGET_USE_SHADOW_COMMON := true
-TARGET_KERNEL_CONFIG  := shadow_cm11_defconfig
+TARGET_KERNEL_CONFIG  := mapphone_defconfig
 
