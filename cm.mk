@@ -13,30 +13,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+$(call inherit-product, device/moto/shadow/full_shadow.mk)
 
 # Inherit some common CM stuff
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
-$(call inherit-product, vendor/cm/config/cdma.mk)
-$(call inherit-product, device/moto/shadow/full_shadow.mk)
 
+PRODUCT_RELEASE_NAME := MOTOROLA SHADOW
 PRODUCT_NAME := cm_shadow
-PRODUCT_BRAND := Verizon
-PRODUCT_DEVICE := shadow
-PRODUCT_MODEL := DROIDX
-PRODUCT_MANUFACTURER := Motorola
-PRODUCT_RELEASE_NAME := Motorola Droid X
-PRODUCT_SFX := cdma
-
-UTC_DATE := $(shell date +%s)
-DATE := $(shell date +%Y%m%d)
-
-PRODUCT_BUILD_PROP_OVERRIDES += \
-   PRODUCT_NAME=${PRODUCT_DEVICE}_${PRODUCT_SFX} \
-   BUILD_NUMBER=${DATE} \
-   TARGET_DEVICE=${PRODUCT_DEVICE} \
-   BUILD_FINGERPRINT=${PRODUCT_BRAND}/${PRODUCT_DEVICE}_${PRODUCT_SFX}/${PRODUCT_DEVICE}:${PLATFORM_VERSION}/${BUILD_ID}/${DATE}:user/release-keys \
-   PRIVATE_BUILD_DESC="${PRODUCT_DEVICE}-user ${PLATFORM_VERSION} ${BUILD_ID} ${DATE} release-keys" \
-   PRODUCT_BRAND=${PRODUCT_BRAND} \
-   BUILD_UTC_DATE=${UTC_DATE} \
-   PRODUCT_DEFAULT_LANGUAGE=en \
-   PRODUCT_DEFAULT_REGION=US \

@@ -27,6 +27,11 @@
 # inherit from common shadow
 include device/moto/shadow-common/BoardConfig.mk
 
+LOCAL_PATH := device/moto/shadow-common
+
+# Assert
+TARGET_OTA_ASSERT_DEVICE := shadow
+
 TARGET_USE_SHADOW_COMMON := true
-TARGET_KERNEL_CONFIG  := mapphone_defconfig
+TARGET_KERNEL_CONFIG  := shadow_cm11_defconfig
 

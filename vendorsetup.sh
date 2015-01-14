@@ -20,6 +20,5 @@
 # In particular, you can add lunch options with the add_lunch_combo
 # function: add_lunch_combo generic-eng
 
-#dd_lunch_combo full_shadow-eng
 add_lunch_combo cm_shadow-userdebug
 
